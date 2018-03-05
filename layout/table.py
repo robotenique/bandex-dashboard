@@ -4,6 +4,7 @@ import dash_html_components as html
 import pandas as pd
 app = dash.Dash()
 
+## --------  APP   --------
 df = pd.read_csv(
     'https://gist.githubusercontent.com/chriddyp/'
     'c78bf172206ce24f77d6363a2d754b59/raw/'
@@ -26,6 +27,7 @@ app.layout = html.Div(children=[
     html.H4(children='US Agriculture Exports (2011)'),
             generate_table(df)
     ])
+
 
 if __name__ == '__main__':
     app.run_server(debug=True)
